@@ -1,0 +1,18 @@
+@import "materialize";
+
+/*
+*= require material_icons
+*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.ilike-blue-container {
+  @extend .blue-text, .text-lighten-4;
+}

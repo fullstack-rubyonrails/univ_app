@@ -1,15 +1,86 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>UnivApp</title>
+    <title>Tech University</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   </head>
 
   <body>
-    <%= yield %>
+  <header>
+    <!--<br>Application Layout</br>-->
+    <!--<br><%= link_to ("app/views/application.html.erb") %></br>-->
+    <!--<br><%= link_to 'Home', root_path %></br>-->
+    <!--<br><%= link_to 'Register New Course', courses_new_path %></br>-->
+    <!--<br><%= link_to 'About', about_path %></br>-->
+  
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">one</a></li>
+      <li><a href="#!">two</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">three</a></li>
+    </ul>
+
+    <ul id="dropdown2" class="dropdown-content">
+      <li><a href="#!">one</a></li>
+      <li><a href="#!">two</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">three</a></li>
+    </ul>
+
+    <nav class = "lime darken-4">
+      <div class="container lime darken-4">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo right">Tech University</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Enrollment</a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+          </ul>
+          <ul class="sidenav" id="mobile-demo">
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Enrollment</a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </main>
+  <footer class="page-footer teal darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Tech University</h5>
+          <p class="grey-text text-lighten-4">Future of Developement Training.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Information</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Help</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </footer>
+    <div class="lime darken-4 footer-copyright">
+      <div class="container white-text">
+      © 2024 Tech University
+      <a class="white-text text-lighten-4 right" href="#!">About</a>
+      </div>
+    </div>
+
   </body>
 </html>

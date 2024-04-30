@@ -2,12 +2,29 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
+import 'materialize-css/dist/js/materialize';
+import 'materialize-css/dist/css/materialize.css';
 
+require("jquery")
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+// require("materialize")
+//= require materialize-sprockets
 
+// DropDown Menu Icon
+$(document).on('turbolinks:load', function() {
+  $(".dropdown-trigger").dropdown();
+  // Mobile Collaps Hamburger Icon
+  $('.sidenav').sidenav();
+})
+
+// // Mobile Collaps Hamburger Icon (Plain Venilla Script)
+// document.addEventListener('DOMContentLoaded', function() {
+//   var elems = document.querySelectorAll('.sidenav');
+//   var instances = M.Sidenav.init(elems, options);
+// });
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
