@@ -5,40 +5,19 @@
   </div>
 
   <div class="row">
-    <div class="col s4 m6">
-      <div class="card brown darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">CS1021: Intorduction to Computer Science</span>
-          <p>A through introduction to Computer Science. A through introduction to Computer Science. A through introduction to Computer Science.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Enroll</a>
-          <a href="#">Info</a>
-        </div>
-      </div>
-    </div>
-    <div class="col s4 m6">
-      <div class="card brown darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">CS1022: Intorduction to Artificial Intelligence</span>
-          <p>A brief introduction to Artificial Intelligence. A brief introduction to Artificial Intelligence. A brief introduction to Artificial Intelligence</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Enroll</a>
-          <a href="#">Info</a>
+    <% @courses.each do |course| %>
+
+      <div class="col s4 m6">
+        <div class="card brown darken-1">
+          <div class="card-content white-text">
+            <span class="card-title"><%= course.short_name %>: <%= course.name %></span>
+            <p><%= course.description%></p>
+          </div>
+          <div class="card-action">
+            <a href="#">Enroll</a>
+            <a href="#">Info</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col s4 m6">
-      <div class="card brown darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">CS1025: Intorduction to Object Oriented Programming</span>
-          <p>Introduction to Object Oriented Programming. Introduction to Object Oriented Programming. Introduction to Object Oriented Programming</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Enroll</a>
-          <a href="#">Info</a>
-        </div>
-      </div>
-    </div>
+    <% end %>
   </div>
