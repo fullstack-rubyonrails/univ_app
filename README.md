@@ -4,6 +4,6 @@ This README shows steps performed for the committ.
 
 Things coverd:
 
-- Initialize studends resources in routes.rb
-- Create students_conrtoller.rb define StudentsController class, add index page and define @students instance variable
-- In view/students add index page (copy from courses index page) make changes accordingly
+- In student_controller add defination of new
+- Add new Student form in app/view/students/new.html.erb
+- Use from_with helper method  to Add input fields in card
