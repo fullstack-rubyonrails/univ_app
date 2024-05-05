@@ -4,6 +4,6 @@ This README shows steps performed for the committ.
 
 Things coverd:
 
-- In student_controller add defination of new
-- Add new Student form in app/view/students/new.html.erb
-- Use from_with helper method  to Add input fields in card
+- Define create method for new student registration
+- Validation check for create student from front-end
+- Display error message on form new.html.erb
