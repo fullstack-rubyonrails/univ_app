@@ -18,6 +18,7 @@ $(document).on('turbolinks:load', function() {
   $(".dropdown-trigger").dropdown();
   // Mobile Collaps Hamburger Icon
   $('.sidenav').sidenav();
+  $('#fade-out-target').fadeOut(4000);
 })
 
 // // Mobile Collaps Hamburger Icon (Plain Venilla Script)
