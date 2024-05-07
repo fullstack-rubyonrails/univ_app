@@ -4,5 +4,5 @@ This README shows steps performed for the committ.
 
 Things coverd:
 
-- Add javascript to fadeout login flash message
-- Add login flash card in navigation.html.erb
+- Add studet SHOW method in student_controller
+- Add SHOW.html.erb file in app/view/students

@@ -2,6 +2,9 @@ class StudentsController < ApplicationController
   def index
     @students = Student.all
   end
+  def show
+    @student = Student.find(params[:id])
+  end
   def new
     @student = Student.new
   end
@@ -11,7 +14,7 @@ class StudentsController < ApplicationController
       flash[:notice] = "You have successfully Signed Up"
       redirect_to students_path
     else
-      render 'new'
+      render 'new', status: :unprocessable_entity
     end
   end
   

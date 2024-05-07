@@ -5,19 +5,18 @@
 </div>
 
 <div class="row">
-<% @students.each do |student| %>
-
-  <div class="col s4 m6">
-    <div class="card brown darken-1">
-      <div class="card-content white-text">
-        <span class="card-title">Name: <%= student.name %></span>
-        <p>Email:<%= student.email %></p>
-        <p>Course Enrollments: None</p>
-      </div>
-      <div class="card-action">
-        <a href="#">View Profile</a>
+  <% @students.each do |student| %>
+    <div class="col s4 m6">
+      <div class="card brown darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Name: <%= student.name %></span>
+          <p>Email:<%= student.email %></p>
+          <p>Course Enrollments: None</p>
+        </div>
+        <div class="card-action">
+          <a href="#">View Profile</a>
+        </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
 </div>
