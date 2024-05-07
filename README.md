@@ -4,5 +4,6 @@ This README shows steps performed for the committ.
 
 Things coverd:
 
-- Add studet SHOW method in student_controller
-- Add SHOW.html.erb file in app/view/students
+- Add EIDT & UPDATE controller actions
+- Add EDIT PROFILE button and EDIT link in SHOW profile
+- Add EDIT.html.erb form, copy from NEW.thml.erb, in view/students/
