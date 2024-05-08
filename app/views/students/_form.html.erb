@@ -10,15 +10,30 @@
         <div class ="row">
           <div class="input-field col s12">
             <%= f.text_field :name, placeholder: "Enter your full name", autofocus: true %>
-            <%= f.label :name %>
+            <%= f.label :name, class: "active" %>
           </div>
         </div>
 
         <div class ="row">
           <div class="input-field col s12">
             <!-- <%= email_field(:student, :email) %> -->
-            <%= f.email_field :email, placeholder: "Enter your passowrd" %>
-            <%= f.label :email %>
+            <%= f.email_field :email, placeholder: "Enter your email" %>
+            <%= f.label :email, class: "active" %>
+          </div>
+        </div>
+        
+        <div class ="row">
+          <div class="input-field col s12">
+          <!-- <%= password_field(:student, :password) %> -->
+          <%= f.password_field :password, placeholder: "Type your passowrd" %>
+          <%= f.label :password, class: "active" %>
+          </div>
+        </div>
+        <div class ="row">
+          <div class="input-field col s12">
+            <!-- <%= password_field(:student, :password) %> -->
+            <%= f.password_field :password_confirmation, placeholder: "Retype your passowrd" %>
+            <%= f.label :password_confirmation, class: "active" %>
           </div>
         </div>
 
@@ -27,7 +42,7 @@
             <!-- <button class="btn blue-grey waves-effect waves-light left" type="submit"><%= f.submit "Submit" %>
               <i class="material-icons right">send</i> -->
             </button>
-            <%= f.submit(@student.new_record? ? "Sign Up" : "Submit Changes", class: "btn blue-grey waves-effect waves-light left") %>
+            <%= f.button(@student.new_record? ? '<i class="material-icons right black-text">arrow_forward</i>Sign Up!'.html_safe : '<i class="material-icons right black-text">arrow_forward</i>Submit Changes'.html_safe, class: "btn blue-grey waves-effect waves-light left") %>
           </div>
         </div>
       <% end %>
