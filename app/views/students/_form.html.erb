@@ -1,0 +1,38 @@
+<%= render 'shared/errors', ojb: @student %>
+
+<div class="container">
+<div class="row center sign-up-form">
+<div class="col s12 m12 l12">
+  <div class="card-panel">
+    <h3 class="header"><%= @student.new_record? ? "Sign Up" : "Edit Profile" %></h3>
+    <div class="row">
+      <%= form_with model: @student, class: "col s12" do |f| %>
+        <div class ="row">
+          <div class="input-field col s12">
+            <%= f.text_field :name, placeholder: "Enter your full name", autofocus: true %>
+            <%= f.label :name %>
+          </div>
+        </div>
+
+        <div class ="row">
+          <div class="input-field col s12">
+            <!-- <%= email_field(:student, :email) %> -->
+            <%= f.email_field :email, placeholder: "Enter your passowrd" %>
+            <%= f.label :email %>
+          </div>
+        </div>
+
+        <div class ="row">
+          <div class="input-field col s12">
+            <!-- <button class="btn blue-grey waves-effect waves-light left" type="submit"><%= f.submit "Submit" %>
+              <i class="material-icons right">send</i> -->
+            </button>
+            <%= f.submit(@student.new_record? ? "Sign Up" : "Submit Changes", class: "btn blue-grey waves-effect waves-light left") %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
+</div>
