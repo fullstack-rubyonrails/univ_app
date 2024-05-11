@@ -4,16 +4,13 @@ This README shows steps performed for the committ.
 
 Things coverd:
 
-- Add routes for LOGIN, SIGNUP & DESTROY
-- Create and copy code for LOGIN in new.html.erb in VIEWS/LOGINS
-- Create DESTROY & CREATE pages with the name destroy.html.erb & create.html.erb in VIEW/LOGINS
-- Create session_link method in application_helper.rb file;
-  - LOGIN link for not LOGEDIN user
-  - LOGOUT link for LOGGEDIN user
-  and add this method in _navigation.html.erb file
-- LOGINS_CONTROLLER methods;
-  - Create & Destroy
-- APPLICATION_CONTROLLER methods;
-  -Current_user
-  -Logged_in?
-  Since these methods are created in APPLICATION_CONTROLLER, added helper_method for  current_user & logged_in?
+- Add require_user method BEFORE action in application_controller
+- Skip_before_aciton, require_user in CORUSES_CONTROLLER
+- Skip_before_action, require_user in LOGINS_CONTROLLER for new & create action
+- Skip_before_action, require_user in PAGES_CONTROLLER for about action
+- Skip_before_action, require_user in STUDENT_CONTROLLER for new & create action
+- Convert Main Logo, Courses and Enrollment to link to relevant pages in NAVIGATION partial
+  - Restrict Student Directory access only to lggedin user
+- Add class: active in email lable feild for text overlaping
+- In index.html.erb change card option Veiw Student Profile to LINK
+- Restrict other users profile edit from browser link

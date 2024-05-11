@@ -7,7 +7,9 @@
         <p>Course Enrollments: None</p>
       </div>
       <div class="card-action">
-        <%= link_to '<i class="material-icons right black-text">edit</i>Edit Profile'.html_safe, edit_student_path(@student), class: "waves-effect white black-text btn" %>
+        <% if current_user == @student %>
+          <%= link_to '<i class="material-icons right black-text">edit</i>Edit Profile'.html_safe, edit_student_path(@student), class: "waves-effect white black-text btn" %>
+        <% end %>
       </div>
     </div>
   </div>
